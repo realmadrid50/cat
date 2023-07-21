@@ -1318,20 +1318,20 @@ p {
   text-align: start;
 }
 
-.FAQ{
+.FAQ {
 
   display: flex;
   margin-top: 40px;
   flex-direction: column;
   height: 3%;
-  width:  80%;
+  width: 80%;
   justify-content: center;
   align-items: center;
   gap: 1vmin;
-  
+
 }
 
-.FAQ h2{
+.FAQ h2 {
   background: linear-gradient(45deg, rgb(216, 105, 216), rgb(246, 172, 37), rgb(220, 220, 70));
   -webkit-background-clip: text;
   /* Apply gradient as text color for webkit-based browsers */
@@ -1339,8 +1339,8 @@ p {
   font-size: 2em;
 }
 
-.FAQ p{
-  
+.FAQ p {
+
   background: linear-gradient(45deg, rgb(219, 190, 219), rgb(171, 163, 149), rgb(207, 207, 185));
   -webkit-background-clip: text;
   /* Apply gradient as text color for webkit-based browsers */
@@ -1349,7 +1349,7 @@ p {
 
 }
 
-.fak{
+.fak {
 
   max-width: 1400px;
   min-width: 350px;
@@ -1371,18 +1371,18 @@ p {
 
 
 
-.fak.active .answer{
+.fak.active .answer {
   max-height: 800px;
 }
 
-.question{
+.question {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.question h3{
+.question h3 {
   color: white;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
@@ -1393,14 +1393,15 @@ p {
 
 }
 
-.answer{
+.answer {
   max-height: 0;
   overflow: hidden;
   width: 100%;
-  transition: max-height 0.5s ease-in-out; /* Add the transition property */
+  transition: max-height 0.5s ease-in-out;
+  /* Add the transition property */
 }
 
-.answer p{
+.answer p {
   padding: 1em;
   width: 100%;
   line-height: 1.6;
@@ -1409,42 +1410,43 @@ p {
 }
 
 
-@media screen and (max-width: 1053px ) {
-  .answer p{
+@media screen and (max-width: 1053px) {
+  .answer p {
     padding: 2em 0em 3em 0em;
   }
-  
+
 }
 
-@media screen and (max-width: 883px ) {
-  .answer p{
+@media screen and (max-width: 883px) {
+  .answer p {
     padding: 2em 0em 4em 0em;
   }
-  
+
 }
 
-@media screen and (max-width: 653px ) {
-  .answer p{
+@media screen and (max-width: 653px) {
+  .answer p {
     padding: 2em 0em 5em 0em;
     font-size: 0.9em;
   }
-  
+
 }
 
 
-@media screen and (max-width: 583px ) {
-  .answer p{
+@media screen and (max-width: 583px) {
+  .answer p {
     padding: 2em 0em 6em 0em;
     font-size: 0.9em;
   }
-  
+
 }
 
 
 .arrow {
   /* Set the initial rotation to 0 degrees */
   transform: rotate(0deg);
-  transition: transform 0.3s ease; /* Add the transition property */
+  transition: transform 0.3s ease;
+  /* Add the transition property */
 }
 
 .arrow.rotate {
@@ -1454,7 +1456,7 @@ p {
 }
 
 
-.socials{
+.socials {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -1465,7 +1467,7 @@ p {
 
 }
 
-.socials-img{
+.socials-img {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1475,17 +1477,20 @@ p {
 }
 
 .my-icon {
-  font-size: 30px; /* Adjust the font-size to control the icon size */
+  font-size: 30px;
+  /* Adjust the font-size to control the icon size */
   cursor: pointer;
   z-index: 99;
-  transition: font-size 0.3s ease; /* Smooth transition for size change */
+  transition: font-size 0.3s ease;
+  /* Smooth transition for size change */
 
 }
 
-.my-icon:hover{
+.my-icon:hover {
   font-size: 34px;
   color: rgba(255, 255, 255, 0.716);
-  animation: shiningEffect 1s infinite; /* Shining effect animation */
+  animation: shiningEffect 1s infinite;
+  /* Shining effect animation */
 
 }
 
@@ -1494,12 +1499,14 @@ p {
     opacity: 1;
   }
 
-  30%{
+  30% {
     opacity: 0.5;
   }
+
   50% {
     opacity: 0.8;
   }
+
   100% {
     opacity: 1;
   }
@@ -1511,46 +1518,54 @@ p {
   font-size: 30px;
   cursor: pointer;
   z-index: 99;
-  transition: font-size 0.3s ease; /* Smooth transition for size change */
+  transition: font-size 0.3s ease;
+  /* Smooth transition for size change */
 }
 
-.twitter-icon:hover{
+.twitter-icon:hover {
   font-size: 38px;
   color: rgba(255, 255, 255, 0.716);
-  animation: shiningEffect 1s infinite; /* Shining effect animation */
+  animation: shiningEffect 1s infinite;
+  /* Shining effect animation */
 }
 
 
-@media screen and (max-width: 653px ) {
+@media screen and (max-width: 653px) {
   .my-icon {
-    font-size: 20px; /* Adjust the font-size to control the icon size */
+    font-size: 20px;
+    /* Adjust the font-size to control the icon size */
     cursor: pointer;
     z-index: 99;
-    transition: font-size 0.3s ease; /* Smooth transition for size change */
-  
+    transition: font-size 0.3s ease;
+    /* Smooth transition for size change */
+
   }
-  
-  .my-icon:hover{
+
+  .my-icon:hover {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.716);
-    animation: shiningEffect 1s infinite; /* Shining effect animation */
-  
+    animation: shiningEffect 1s infinite;
+    /* Shining effect animation */
+
   }
+
   .twitter-icon {
     color: #ffffff;
     font-size: 22px;
     cursor: pointer;
     z-index: 99;
-    transition: font-size 0.3s ease; /* Smooth transition for size change */
-  }
-  
-  .twitter-icon:hover{
-    font-size: 25px;
-    color: rgba(255, 255, 255, 0.716);
-    animation: shiningEffect 1s infinite; /* Shining effect animation */
+    transition: font-size 0.3s ease;
+    /* Smooth transition for size change */
   }
 
-  
+  .twitter-icon:hover {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.716);
+    animation: shiningEffect 1s infinite;
+    /* Shining effect animation */
+  }
+
+
 }
 
 .how-it-works .code-background {
@@ -1880,11 +1895,11 @@ p {
   .right .right-area .token-name h2 {
     font-size: 1.575rem;
   }
-  
+
   .right .right-area .supply h5 {
     font-size: 1em;
   }
-  
+
   .step {
     position: relative;
     color: white;
@@ -1894,7 +1909,7 @@ p {
     margin-bottom: 1rem;
     font-size: 1rem;
     display: flex;
-    height:2.6rem;
+    height: 2.6rem;
     width: 2.6rem;
     border: 2px solid #90dbe682;
   }
@@ -1923,6 +1938,7 @@ p {
     border-radius: 11px;
     z-index: 99;
   }
+
   .bands {
 
     width: 100%;
@@ -1933,12 +1949,12 @@ p {
 
   }
 
-  .socials p{
+  .socials p {
     font-size: 0.8em;
   }
-  
-  
-  
+
+
+
   .first-check {
     width: 100%;
     height: 30%;
@@ -2021,7 +2037,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 0.7em;
   }
-  
+
 
   .small-transparent-white {
     color: hsla(0, 0%, 100%, 0.641);
@@ -2030,7 +2046,7 @@ p {
     font-family: 'Poppins', sans-serif;
   }
 
-  
+
   .left .vesting h4 {
     color: hsla(0, 0%, 100%, 0.641);
     -webkit-background-clip: text;
@@ -2043,7 +2059,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9em;
   }
-  
+
 
   .double-check {
     width: 100%;
@@ -2051,8 +2067,8 @@ p {
     display: flex;
     align-items: center;
   }
-  
-  
+
+
 
   .tokenomics {
     border-radius: 1rem;
@@ -2161,6 +2177,18 @@ p {
     color: white;
   }
 
+  .how-it-works .code-background {
+    background-color: #1a1a1a00;
+    background-image: linear-gradient(#1a1a1a00 1px, transparent 1px),
+      linear-gradient(to right, #1a1a1a00 1px, #1a1a1a00 1px);
+    background-size: 40px 40px;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+    display: non;
+    color: #82c19e;
+    border-radius: 11px;
+    z-index: -1;
+  }
+
   .below h2 {
     font-size: clamp(2rem, 2.2rem + 1vw, 2rem);
   }
@@ -2249,6 +2277,7 @@ p {
   main {
     top: 170px;
     width: 100vw;
+    overflow-x: hidden;
   }
 
 
@@ -2259,6 +2288,7 @@ p {
 
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     top: 0;
     bottom: 0;
     justify-content: center;
@@ -2270,7 +2300,7 @@ p {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    height: 600vh;
+    height: 800vh;
     position: relative;
     width: 100%;
   }
@@ -2296,7 +2326,7 @@ p {
     display: flex;
     max-width: 1100px;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     height: 15%;
     justify-content: center;
     gap: 2vmin;
@@ -2375,11 +2405,11 @@ p {
   }
 
   .loop img {
-    width: 80px;
+    width: 70px;
   }
 
   .loop {
-    right: -30px;
+    right: -15px;
   }
 
   .scroll {
@@ -2416,6 +2446,49 @@ p {
     height: 1%;
 
   }
+
+  body {
+
+    background: linear-gradient(270deg, #1B0A37, #1B0A37);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    height: 650vh;
+    position: relative;
+    width: 100%;
+  }
+
+  .main{
+    overflow-x: hidden;
+  }
+
+  .foug {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    bottom: 0;
+  }
+
+  .step {
+    position: relative;
+    color: white;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    height: 2.6rem;
+    width: 2.6rem;
+    border: 2px solid #90dbe682;
+  }
+
 
 
 }
