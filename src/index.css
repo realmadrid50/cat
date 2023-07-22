@@ -1402,17 +1402,21 @@ p {
 }
 
 .answer p {
-  padding: 1em;
+  padding: 1em 0em 1em 0em;
   width: 100%;
   line-height: 1.6;
+  align-items: start;
   color: hsla(0, 0%, 100%, 0.641);
   font-family: 'Poppins', sans-serif;
 }
-
+.fak .answer p{
+  text-align: start;
+}
 
 @media screen and (max-width: 1053px) {
   .answer p {
     padding: 2em 0em 3em 0em;
+    align-items: start;
   }
 
 }
@@ -1420,6 +1424,7 @@ p {
 @media screen and (max-width: 883px) {
   .answer p {
     padding: 2em 0em 4em 0em;
+    align-items: start;
   }
 
 }
