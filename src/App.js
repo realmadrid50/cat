@@ -1,4 +1,4 @@
-import './index.css';
+import './app.css';
 import logo from './media/cat.png'
 import cat from './media/cute.png'
 import paw from './media/raw.png'
@@ -23,11 +23,49 @@ import wright from './media/winclined.png'
 
 
 
+
+
 function App() {
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const words = ['LayerZero ', 'ZkSync '];
   const [isAnimating, setIsAnimating] = useState(false);
+
+
+  const faqRef = useRef(null);
+
+
+  const handleFAQButtonClick = () => {
+    faqRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const tokenomics = useRef(null);
+
+
+  const handletokenomics = () => {
+    tokenomics.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const Work = useRef(null);
+
+  const handleWork = () => {
+    Work.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
+  
+
+  const redirectToGitbook = () => {
+    window.location.href = 'https://catbotxyz.gitbook.io/catbot/'; // Replace with your desired YouTube link
+  };
+
+  const redirectToTelegram = () => {
+    window.location.href = 'https://t.me/TheCatBotXYZ'; // Replace with your desired YouTube link
+  };
+
+  const redirectToTwitter = () => {
+    window.location.href = 'https://twitter.com/TheCatBotXYZ'; // Replace with your desired YouTube link
+  };
 
 
 
@@ -160,13 +198,13 @@ function App() {
           </div>
           <div className='pages'>
             <a>Introduction</a>
-            <a>How it works</a>
-            <a>Tokenomics</a>
-            <a>FAQ</a>
+            <a onClick={handleWork}>How it works</a>
+            <a onClick={handletokenomics}>Tokenomics</a>
+            <a onClick={handleFAQButtonClick}> FAQ</a>
           </div>
 
           <div className='cb'>
-            <button>
+            <button onClick={redirectToTelegram}>
               <h5>Join Us</h5>
             </button>
           </div>
@@ -202,14 +240,14 @@ function App() {
 
           <div className='paragraph'>
 
-            <p>Catbot is a Telegram bot that automates on-chain interactions and acts as a streamline frontend for hundreds of chains. Anyone can create or follow automated tasks that could help with objectives such as Airdrop Farming.</p>
+            <p>Catbot automates on-chain interactions with just one click, you can create or follow automated tasks, making Airdrop Farming a breeze and saving you days of manual clicking.</p>
 
           </div>
 
         </div>
         <div className='docs'>
 
-          <button>
+          <button onClick={redirectToGitbook}>
             CHECK OUR DOCS
           </button>
         </div>
@@ -229,9 +267,9 @@ function App() {
           </div>
         </div>
 
-        <div className='how-it-works'>
+        <div className='how-it-works' ref={Work}>
           <h2>How <span>It Works</span> </h2>
-          <p>Type <span className='code-background '>/start</span> and Catbot will manage everything else. All you have to do now is enjoy farming airdrops on autopilot.</p>
+          <p>Type <span className='code-background '>/farm</span> and Catbot will manage everything else. All you have to do now is enjoy farming airdrops on autopilot.</p>
         </div>
 
         <div className='working'>
@@ -250,8 +288,8 @@ function App() {
             </div>
 
             <div className='text'>
-              <h3>Meet CatBot</h3>
-              <p>Type <span>/start </span>to <span>@CatBot_CatBot </span>
+              <h3>Say 👋 to CatBot</h3>
+              <p>Type <span>/farm </span>to <span>@CatBot_CatBot </span>
                 on Telegram</p>
             </div>
 
@@ -303,40 +341,40 @@ function App() {
 
             ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> kSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> Starknet -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> Meow -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> Anti-Sybil -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> Starknet -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span>             ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Meow</span> ZkSync  - <span> Telegram Bot -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> kSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> kSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Meow - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span>             ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span>             ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> kSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Meow -</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span> ZkSync  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span> Meow  - <span> LayerZero -  </span> Linea -  <span> Scroll -  </span> ZkSync - <span> CatBot - </span> Base - <span> LayerZero - </span>
 
-            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll</span>
+            Polygon zkEVM - <span> Taiko - </span> Airdrop - <span> Farming - </span> Catbot - <span>Scroll -</span>
           </div>
         </div>
 
         <div className='blank-2'></div>
-        <div className='tokenomics'>
+        <div className='tokenomics' ref={tokenomics}>
 
           <div className='right'>
 
@@ -354,7 +392,7 @@ function App() {
 
               <div className='supply'>
                 <h5>Total Supply:</h5>
-                <h5>10,000,000 $CATBOT</h5>
+                <h5>100,000,000 $CATBOT</h5>
               </div>
 
               <div className='checks'>
@@ -369,7 +407,7 @@ function App() {
 
                   <div className='zonetext'>
 
-                    <p><span className='bold-white'>Buy/Sell Tax:</span> <span className='semi-transparent-white'>5% tax applied to each transaction of $LOOT</span></p>
+                    <p><span className='bold-white'>Buy/Sell Tax:</span> <span className='semi-transparent-white'>4% tax applied to each transaction of $CATBOT</span></p>
 
 
                   </div>
@@ -385,7 +423,7 @@ function App() {
 
                   <div className='zonetext'>
 
-                    <p><span className='bold-white'>First 6 months:</span> <span className='semi-transparent-white'>1% for LP, 4% for team</span></p>
+                    <p><span className='bold-white'>Redistribution:</span> <span className='semi-transparent-white'>2% for LP, 2% for revenue sharing and 1% for the Team</span></p>
 
 
                   </div>
@@ -401,7 +439,7 @@ function App() {
 
                   <div className='zonetext'>
 
-                    <p><span className='bold-white'>After 6 months:</span> <span className='semi-transparent-white'>1% for LP, 2% for revenue sharing, 2% for team</span></p>
+                    <p><span className='bold-white'>Recap:</span> <span className='semi-transparent-white'>Token is purely a utility token. $CATBOT creates and redistributes pure revenue.</span></p>
 
 
                   </div>
@@ -412,6 +450,8 @@ function App() {
 
               <div className='double-checks'>
 
+
+
                 <div className='double-check'>
 
                   <div className='zonecheck'>
@@ -422,7 +462,7 @@ function App() {
 
                   <div className='zonetext'>
 
-                    <p><span className='bold-white'>Printer goes brrr:</span> <span className='check-transparent-white '>$LOOT holders can refer users and earn 5% of all fees collected from referred users.</span></p>
+                    <p><span className='bold-white'>Presale Date:</span> <span className='check-transparent-white '>TBA</span></p>
 
 
                   </div>
@@ -439,24 +479,7 @@ function App() {
 
                   <div className='zonetext'>
 
-                    <p><span className='bold-white'>Farm together:</span> <span className='check-transparent-white '>$LOOT holders can refer users and earn 5% of all fees collected from referred users.</span></p>
-
-
-                  </div>
-
-                </div>
-
-                <div className='double-check'>
-
-                  <div className='zonecheck'>
-
-                    <FontAwesomeIcon icon={faCheck} className="white-icon" />
-
-                  </div>
-
-                  <div className='zonetext'>
-
-                    <p><span className='bold-white'>Earn together:</span> <span className='check-transparent-white '>Token holders can burn $LOOT for $xLOOT which earns 50% revenue share.</span></p>
+                    <p><span className='bold-white'>Hardcap:</span> <span className='check-transparent-white '>TBA</span></p>
 
 
                   </div>
@@ -481,11 +504,11 @@ function App() {
 
               <div className='distribution'>
                 <div className='number'>
-                  <h4>500,000</h4>
+                  <h4>10,000,000</h4>
                 </div>
                 <div className='members'>
 
-                  <p>Team & Founders (5%)</p>
+                  <p>Team & Founders (10%)</p>
 
                 </div>
                 <div className='loader-wrap'>
@@ -497,34 +520,12 @@ function App() {
                 </div>
               </div>
 
-
-
-
               <div className='distribution'>
                 <div className='secours'>
-                  <h4>500,000</h4>
+                  <h4>50,000,000</h4>
                 </div>
                 <div className='members'>
-
-                  <p>CEX Listing (5%)</p>
-
-                </div>
-                <div className='loader-wrap'>
-                  <div className='loader'>
-                    <div className='cex'>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className='distribution'>
-                <div className='secours'>
-                  <h4>4,000,000</h4>
-                </div>
-                <div className='members'>
-                  <p>Supply Added to Liquidity (40%)</p>
+                  <p>Supply Added to Liquidity (50%)</p>
                 </div>
                 <div className='loader-wrap'>
                   <div className='loader'>
@@ -538,11 +539,11 @@ function App() {
 
               <div className='distribution'>
                 <div className='secours'>
-                  <h4>5,000,000</h4>
+                  <h4>40,000,000</h4>
                 </div>
                 <div className='members'>
 
-                  <p>Seed (50%)</p>
+                  <p>Presale (40%)</p>
 
                 </div>
                 <div className='loader-wrap'>
@@ -562,27 +563,22 @@ function App() {
                 <div className='vesting-loader'>
 
                 </div>
-                <p><span className='small-white'>Team: </span><span className='small-transparent-white'>0% TGE, 6 months cliff, linear for 9 months</span></p>
+                <p><span className='small-white'>Team: </span><span className='small-transparent-white'>3 months cliff, linear vesting of 12 months</span></p>
               </div>
 
               <div className='vesting-wrap'>
                 <div className='vesting-loader'>
 
                 </div>
-                <p><span className='small-white'>Seed: </span><span className='small-transparent-white'>33% TGE, linear for 1 month</span></p>
+                <p><span className='small-white'>Seed: </span><span className='small-transparent-white'>34% TGE, linear for 1 month</span></p>
               </div>
-
-
-
-
-
             </div>
           </div>
 
         </div>
 
 
-        <div className='FAQ'>
+        <div className='FAQ'  ref={faqRef} id="faq-section">
 
           <h2>Frequently Asked Questions</h2>
           <p>If you still have questions</p>
@@ -615,32 +611,6 @@ function App() {
         </div>
 
 
-
-        <div className={`fak ${isActive2 ? 'active' : ''}`} onClick={handleClick2}>
-          <div className='question'>
-            <h3>Who defines the airdrop tasks?</h3>
-            <svg
-              className={`arrow ${isActive2 ? 'rotate' : ''}`}
-              width={'15'}
-              height={'10'}
-              viewBox='0 0 42 25'
-            >
-              <path
-                d='M3 3L21 21L39 3'
-                stroke='white'
-                stroke-width={'7'}
-                stroke-linecap='round'
-              ></path>
-            </svg>
-          </div>
-
-          <div className={`answer ${isActive2 ? 'active' : ''}`}>
-            <p>
-              The airdrop tasks will be defined by airdrop campaigns, but our team will choose which tasks can be automated through the bot.
-            </p>
-          </div>
-        </div>
-
         <div className={`fak ${isActive3 ? 'active' : ''}`} onClick={handleClick3}>
           <div className='question'>
             <h3>What is airdrop Tasks & Routes?</h3>
@@ -663,6 +633,32 @@ function App() {
             <p>
               Tasks: Onchain interactions picked by LootBot Experts: Bridge, swap, NFT minting, liquid provisions, deploying smart contracts...
               Routes: A combination of scheduled tasks configured with conditions.
+            </p>
+          </div>
+        </div>
+        
+
+        <div className={`fak ${isActive2 ? 'active' : ''}`} onClick={handleClick2}>
+          <div className='question'>
+            <h3>Who defines the airdrop tasks?</h3>
+            <svg
+              className={`arrow ${isActive2 ? 'rotate' : ''}`}
+              width={'15'}
+              height={'10'}
+              viewBox='0 0 42 25'
+            >
+              <path
+                d='M3 3L21 21L39 3'
+                stroke='white'
+                stroke-width={'7'}
+                stroke-linecap='round'
+              ></path>
+            </svg>
+          </div>
+
+          <div className={`answer ${isActive2 ? 'active' : ''}`}>
+            <p>
+            Airdrop tasks will be defined by campaigns, and our team will choose which ones the bot can automate.
             </p>
           </div>
         </div>
@@ -749,10 +745,10 @@ function App() {
         <div className='socials'>
 
           <div className='socials-img'>
-            <FontAwesomeIcon icon={faPaperPlane} className="my-icon" />
+            <FontAwesomeIcon icon={faPaperPlane} onClick={redirectToTelegram} className="my-icon" />
 
             {/* Twitter icon from the Brands library */}
-            <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
+            <FontAwesomeIcon icon={faTwitter} onClick={redirectToTwitter} className="twitter-icon" />
 
           </div>
 
