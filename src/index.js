@@ -10,12 +10,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/presale" element={<Presale />} />
-      </Routes>
-    </Router>
+
+    <App></App>
+
   </React.StrictMode>
 );
 
