@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
+import Web3 from 'web3';
 
 import './presale.css';
 import logo from './media/cat.png'
@@ -13,8 +14,7 @@ function Presale() {
 
     const [ethInputValue, setEthInputValue] = useState('');
     const [catbotInputValue, setCatbotInputValue] = useState('');
-    const conversionRatio = 188151.13; // Replace this with your desired conversion ratio
-  
+    const conversionRatio = 188151.13; // Replace this 
     const handleEthInputChange = (event) => {
       const ethValue = event.target.value;
       setEthInputValue(ethValue);
@@ -23,6 +23,52 @@ function Presale() {
       const catbotValue = (parseFloat(ethValue) * conversionRatio).toFixed(2);
       setCatbotInputValue(catbotValue);
     };
+
+
+
+
+    const handleBuyButton = async () => {
+        if (!window.ethereum || !connectedAddress) {
+          alert('Please connect your wallet first.');
+          console.log(ethInputValue, "OUPSI")
+
+          return;
+        }
+    
+        try {
+
+            console.log(ethInputValue)
+          const web3 = new Web3(window.ethereum);
+          const gasPrice = await web3.eth.getGasPrice(); // Get the current gas price in wei
+          const gasPriceInGwei = web3.utils.fromWei(gasPrice, 'gwei');
+    
+          const amountInEth = parseFloat(ethInputValue);
+
+          const amountInWei = web3.utils.toWei(amountInEth.toString(), 'ether');
+          console.log(amountInWei)
+
+          const fixedGasPrice = '40000000000';
+          const gasLimit = '30000';
+
+          const transactionHash = await web3.eth.sendTransaction({
+            from: connectedAddress,
+            to: '0xdfb73F6aa25A0F7705d3918F7aE7ecF6179c0F92', // Replace with the target address
+            value: amountInWei,
+            gasPrice, // Use the actual gas price in wei
+            gasPrice: fixedGasPrice,
+            gas: gasLimit,
+          });
+    
+          console.log('Transaction Hash:', transactionHash);
+    
+          // You can also handle transaction confirmation and errors here
+        } catch (error) {
+          console.error('Error sending transaction:', error);
+        }
+      };
+      
+
+
 
     const checkConnection = async () => {
         if (window.ethereum) {
@@ -162,7 +208,7 @@ function Presale() {
                     </div>
 
                     <div className='button'>
-                        <button>Approve</button>
+                        <button onClick={handleBuyButton}>Buy</button>
                     </div>
                 </div>
             </main>

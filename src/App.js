@@ -289,8 +289,8 @@ function App() {
 
             <div className='text'>
               <h3>Say 👋 to CatBot</h3>
-              <p>Type <span>/farm </span>to <span>@CatBot_CatBot </span>
-                on Telegram</p>
+              <p>Type <span>/farm </span>to <span>@CatBotXYZ </span>
+                on Telegram</p> 
             </div>
 
           </div>
@@ -307,9 +307,13 @@ function App() {
               </div>
 
               <div className='text-bubble'>
-                <h3>Transfer funds</h3>
-                <p>Follow the guide to
-                  complete onboarding. </p>
+                <h3>Top up your wallet</h3>
+                <p>Complete onboarding by following the guide.
+
+
+
+
+</p>
               </div>
 
             </div>
@@ -326,8 +330,7 @@ function App() {
 
               <div className='text-bubble'>
                 <h3>Start Farming</h3>
-                <p>Farm manually or
-                  automatically.</p>
+                <p>Manual or automatic farming.</p>
               </div>
 
             </div>
