@@ -167,7 +167,7 @@ function Presale() {
                         <div className='left-info'>
 
                             <div className='token'>
-                                <p><span className='semi-transparent-white'>Available:</span> 0.0<span className='semi-transparent-white'>/</span>100,000,000</p>
+                           
                             </div>
                             <div className='pricing'>
                                 <p>1 CATBOT = 0.04 USDC</p>
@@ -184,7 +184,6 @@ function Presale() {
                         </div>
 
                         <div className='balance'>
-                            <p>Balance: 0.00</p>
                         </div>
                         <input type='number' value={ethInputValue} placeholder='0'  onChange={handleEthInputChange}>
                         </input>
